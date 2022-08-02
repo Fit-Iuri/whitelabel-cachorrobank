@@ -1,0 +1,24 @@
+name: Clone Banco Generoso
+
+on:
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - ".github/**"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          repository: Fit-Iuri/github-actions-training
+          ref: refs/heads/whitelabel/CachorroBank
+          token: ${{ secrets.API_TOKEN_GITHUB || github.token }}
+          fetch-depth: 0
