@@ -30,6 +30,6 @@ jobs:
         with:
           repository: Fit-Iuri/github-actions-training
           ref: refs/heads/whitelabel/CachorroBank
-          token: ${{ secrets.API_TOKEN_GITHUB || github.token }}
+          token: ${{ secrets.API_TOKEN_GITHUB_2 || github.token }}
           fetch-depth: 0
   
