@@ -28,8 +28,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
         with:
-          fetch-depth: 0
           repository: Fit-Iuri/github-actions-training
           ref: refs/heads/whitelabel/CachorroBank
           token: ${{ secrets.API_TOKEN_GITHUB || github.token }}
+          fetch-depth: 0
   
